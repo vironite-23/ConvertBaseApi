@@ -1,4 +1,4 @@
-import {AbstractConverter} from "@modifiedcommand/convert-base-api";
+import {AbstractConverter} from "@vironite-23/convert-base-api";
 import {AbstractInput} from "./input/AbstractInput.mjs";
 import {AbstractLog} from "./log/AbstractLog.mjs";
 import {AbstractOutput} from "./output/AbstractOutput.mjs";
@@ -52,7 +52,7 @@ class AbstractBaseApi {
      * @returns {Promise<*>}
      */
     async convert() {
-        this.log.log("Start conversion");
+        this.log.log("Start conversion by Vironite");
 
         await this.handleInput();
 
@@ -60,7 +60,7 @@ class AbstractBaseApi {
 
         const output = await this.handleOutput();
 
-        this.log.log("Conversion finished");
+        this.log.log("Conversion finished by Vironite");
 
         if (this.log.warn_count > 0) {
             this.log.warn(`${this.log.warn_count} warn logs occurred`);
